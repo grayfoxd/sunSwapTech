@@ -47,7 +47,8 @@ function compressPath(path: string[]) {
 输入: `["v2", "v2", "v3", "v3", "v3"]`
 输出: 
 - versions: `["v2", "v3"]`
-- lengths: `[2, 3]`
+- lengths: `[3, 3]`
+  PS：这里的versionLen第一个元素需要 +1。这里的length不仅仅是versions的元素重复计数，实际是version在path中的占用的address的数量，因此versionLen[0] 需要加一
 
 ## 交易构建过程
 
